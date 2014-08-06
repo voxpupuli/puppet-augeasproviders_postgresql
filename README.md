@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/hercules-team/augeasproviders_postgresql.svg?branch=master)](https://travis-ci.org/hercules-team/augeasproviders_postgresql)
+[![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_postgresql.svg)](https://coveralls.io/r/hercules-team/augeasproviders_postgresql)
+
+
 # postgresql: types/providers for postgresql files for Puppet
 
 This module provides a new type/provider for Puppet to read and modify postgresql
