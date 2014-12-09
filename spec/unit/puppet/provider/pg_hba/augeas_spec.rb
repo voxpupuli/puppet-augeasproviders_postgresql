@@ -84,7 +84,7 @@ describe provider_class, :if => valid_lens? do
         )
 
         aug_open(target, "Pg_hba.lns") do |aug|
-          aug.match("*[method='md5']").size.should == 2
+          expect(aug.match("*[method='md5']").size).to eq(2)
         end
       end
 
@@ -140,9 +140,9 @@ describe provider_class, :if => valid_lens? do
 
         # Options can be in various orders (hash)
         aug_open(target, "Pg_hba.lns") do |aug|
-          aug.match("*/method/option[.='sameuser']").size.should == 1
-          aug.match("*/method/option[.='krb_realm' and value='EXAMPLE.COM']").size.should == 1
-          aug.match("*/method/option[.='ldapsuffix' and value=',ou=people,dc=example,dc=com']").size.should == 1
+          expect(aug.match("*/method/option[.='sameuser']").size).to eq(1)
+          expect(aug.match("*/method/option[.='krb_realm' and value='EXAMPLE.COM']").size).to eq(1)
+          expect(aug.match("*/method/option[.='ldapsuffix' and value=',ou=people,dc=example,dc=com']").size).to eq(1)
         end
       end
 
@@ -353,7 +353,7 @@ describe provider_class, :if => valid_lens? do
         ))
 
         aug_open(target, "Pg_hba.lns") do |aug|
-          aug.match("*[type='local' and user='all' and database='all']").should == []
+          expect(aug.match("*[type='local' and user='all' and database='all']")).to eq([])
         end
       end
 
@@ -465,7 +465,7 @@ describe provider_class, :if => valid_lens? do
         ))
 
         aug_open(target, "Pg_hba.lns") do |aug|
-          aug.match("*[type='host' and user='all' and database='all' and address='127.0.0.1/32']").should == []
+          expect(aug.match("*[type='host' and user='all' and database='all' and address='127.0.0.1/32']")).to eq([])
         end
       end
 
@@ -501,8 +501,8 @@ describe provider_class, :if => valid_lens? do
         ))
 
         aug_open(target, "Pg_hba.lns") do |aug|
-          aug.match("*[address='192.168.0.0/16']/method/option[.='sameuser']").size.should == 1
-          aug.match("*[address='192.168.0.0/16']/method/option[.='map' and value='omicron']").size.should == 1
+          expect(aug.match("*[address='192.168.0.0/16']/method/option[.='sameuser']").size).to eq(1)
+          expect(aug.match("*[address='192.168.0.0/16']/method/option[.='map' and value='omicron']").size).to eq(1)
         end
       end
 
@@ -518,8 +518,8 @@ describe provider_class, :if => valid_lens? do
         ))
 
         aug_open(target, "Pg_hba.lns") do |aug|
-          aug.match("*[address='192.168.0.0/16']/method/option[.='sameuser']").size.should == 1
-          aug.match("*[address='192.168.0.0/16']/method/option[.='map' and value='omicron']").size.should == 0
+          expect(aug.match("*[address='192.168.0.0/16']/method/option[.='sameuser']").size).to eq(1)
+          expect(aug.match("*[address='192.168.0.0/16']/method/option[.='map' and value='omicron']").size).to eq(0)
         end
       end
     end
@@ -536,9 +536,9 @@ describe provider_class, :if => valid_lens? do
           :provider => "augeas"
         ))
 
-        txn.any_failed?.should_not == nil
-        @logs.first.level.should == :err
-        @logs.first.message.include?(target).should == true
+        expect(txn.any_failed?).not_to eq(nil)
+        expect(@logs.first.level).to eq(:err)
+        expect(@logs.first.message.include?(target)).to eq(true)
       end
     end
   end
