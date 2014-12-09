@@ -1,3 +1,4 @@
+[![Puppet Forge](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
 [![Build Status](https://travis-ci.org/hercules-team/augeasproviders_postgresql.svg?branch=master)](https://travis-ci.org/hercules-team/augeasproviders_postgresql)
 [![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_postgresql.svg)](https://coveralls.io/r/hercules-team/augeasproviders_postgresql)
 
