@@ -1,6 +1,9 @@
-[![Puppet Forge](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
-[![Build Status](https://travis-ci.org/hercules-team/augeasproviders_postgresql.svg?branch=master)](https://travis-ci.org/hercules-team/augeasproviders_postgresql)
+[![Puppet Forge Version](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
+[![Puppet Forge Endorsement](https://img.shields.io/puppetforge/e/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
+[![Build Status](https://img.shields.io/travis/hercules-team/augeasproviders_postgresql/master.svg)](https://travis-ci.org/hercules-team/augeasproviders_postgresql)
 [![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_postgresql.svg)](https://coveralls.io/r/hercules-team/augeasproviders_postgresql)
+[![Gemnasium](https://img.shields.io/gemnasium/hercules-team/augeasproviders_postgresql.svg)](https://gemnasium.com/hercules-team/augeasproviders_postgresql)
 
 
 # postgresql: types/providers for postgresql files for Puppet
