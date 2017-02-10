@@ -1,5 +1,6 @@
 # Alternative Augeas-based provider for pg_hba type
 
+raise("Missing augeasproviders_core dependency") if Puppet::Type.type(:augeasprovider).nil?
 Puppet::Type.type(:pg_hba).provide(:augeas, :parent => Puppet::Type.type(:augeasprovider).provider(:default)) do
   desc "Uses Augeas API to update pg_hba settings"
 
