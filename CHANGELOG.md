@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
+- Upped supported Puppet versions to include Puppet 5  
+
 ## 2.0.3
 
 - Add requirements to metadata.json
