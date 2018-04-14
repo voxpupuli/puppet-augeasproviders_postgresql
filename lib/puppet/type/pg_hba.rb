@@ -45,6 +45,8 @@ Puppet::Type.newtype(:pg_hba) do
     munge do |value|
       if value.is_a? Array
         value
+      elsif value.is_a? String
+        value.split(',')
       else
         [value]
       end
@@ -59,6 +61,8 @@ Puppet::Type.newtype(:pg_hba) do
     munge do |value|
       if value.is_a? Array
         value
+      elsif value.is_a? String
+        value.split(',')
       else
         [value]
       end
@@ -81,49 +85,47 @@ Puppet::Type.newtype(:pg_hba) do
   end
 
   def self.title_patterns
-    identity = lambda { |x| x }
-    comma_split = lambda { |x| x.split(',') }
     [
       [
         /^(local)\s+to\s+(\S+)\s+on\s+(\S+)\s+in\s+(.*)$/,
         [
-          [ :type, identity ],
-          [ :user, comma_split ],
-          [ :database, comma_split ],
-          [ :target, identity ],
+          [ :type ],
+          [ :user ],
+          [ :database ],
+          [ :target ],
         ]
       ],
       [
         /^(local)\s+to\s+(\S+)\s+on\s+(\S+)$/,
         [
-          [ :type, identity ],
-          [ :user, comma_split ],
-          [ :database, comma_split ],
+          [ :type ],
+          [ :user ],
+          [ :database ],
         ]
       ],
       [
         /^(host\S*)\s+to\s+(\S+)\s+on\s+(\S+)\s+from\s+(\S+)\s+in\s+(.*)$/,
         [
-          [ :type, identity ],
-          [ :user, comma_split ],
-          [ :database, comma_split ],
-          [ :address, identity ],
-          [ :target, identity ]
+          [ :type ],
+          [ :user ],
+          [ :database ],
+          [ :address ],
+          [ :target ]
         ]
       ],
       [
         /^(host\S*)\s+to\s+(\S+)\s+on\s+(\S+)\s+from\s+(\S+)$/,
         [
-          [ :type, identity ],
-          [ :user, comma_split ],
-          [ :database, comma_split ],
-          [ :address, identity ],
+          [ :type ],
+          [ :user ],
+          [ :database ],
+          [ :address ],
         ]
       ],
       [
         /(.*)/,
         [
-          [ :name, identity ],
+          [ :name ],
         ]
       ]
     ]

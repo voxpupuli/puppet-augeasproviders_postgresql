@@ -1,8 +1,13 @@
 # Changelog
 
+## 2.0.5
+
+- Fix support for 'puppet generate types'
+- Added CentOS and OracleLinux to supported OS list
+
 ## 2.0.4
 
-- Upped supported Puppet versions to include Puppet 5  
+- Upped supported Puppet versions to include Puppet 5
 
 ## 2.0.3
 
