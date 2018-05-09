@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.5
+## 3.0.0
 
 - Fix support for 'puppet generate types'
 - Added CentOS and OracleLinux to supported OS list
