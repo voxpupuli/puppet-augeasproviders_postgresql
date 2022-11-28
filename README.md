@@ -1,11 +1,13 @@
-[![Puppet Forge Version](http://img.shields.io/puppetforge/v/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
-[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
-[![Puppet Forge Endorsement](https://img.shields.io/puppetforge/e/herculesteam/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql)
-[![Build Status](https://img.shields.io/travis/hercules-team/augeasproviders_postgresql/master.svg)](https://travis-ci.org/hercules-team/augeasproviders_postgresql)
-[![Coverage Status](https://img.shields.io/coveralls/hercules-team/augeasproviders_postgresql.svg)](https://coveralls.io/r/hercules-team/augeasproviders_postgresql)
-[![Gemnasium](https://img.shields.io/gemnasium/hercules-team/augeasproviders_postgresql.svg)](https://gemnasium.com/hercules-team/augeasproviders_postgresql)
-[![Sponsor](https://img.shields.io/badge/%E2%99%A5-Sponsor-hotpink.svg)](https://github.com/sponsors/raphink)
-
+[![Build Status](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/workflows/CI/badge.svg)](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/actions?query=workflow%3ACI)
+[![Release](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/actions/workflows/release.yml)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/puppet/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_postgresql)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/puppet/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_postgresql)
+[![Puppet Forge - endorsement](https://img.shields.io/puppetforge/e/puppet/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_postgresql)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/puppet/augeasproviders_postgresql.svg)](https://forge.puppetlabs.com/puppet/augeasproviders_postgresql)
+[![puppetmodule.info docs](http://www.puppetmodule.info/images/badge.png)](http://www.puppetmodule.info/m/puppet-augeasproviders_postgresql)
+[![Coverage Status](https://img.shields.io/coveralls/voxpupuli/puppet-augeasproviders_postgresql.svg)](https://coveralls.io/r/voxpupuli/puppet-augeasproviders_postgresql)
+[![Apache-2 License](https://img.shields.io/github/license/voxpupuli/puppet-augeasproviders_postgresql.svg)](LICENSE)
+[![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
 
 # postgresql: types/providers for postgresql files for Puppet
 
@@ -30,7 +32,9 @@ See [Puppet/Augeas pre-requisites](http://docs.puppetlabs.com/guides/augeas.html
 
 On Puppet 2.7.14+, the module can be installed easily ([documentation](http://docs.puppetlabs.com/puppet/latest/reference/modules_installing.html)):
 
-    puppet module install herculesteam/augeasproviders_postgresql
+```
+puppet module install puppet/augeasproviders_postgresql
+```
 
 You may see an error similar to this on Puppet 2.x ([#13858](http://projects.puppetlabs.com/issues/13858)):
 
@@ -58,7 +62,7 @@ pg_hba                    | **yes** | **yes** | **yes** | **yes** |
 ## Documentation and examples
 
 Type documentation can be generated with `puppet doc -r type` or viewed on the
-[Puppet Forge page](http://forge.puppetlabs.com/herculesteam/augeasproviders_postgresql).
+[Puppet Forge page](http://forge.puppetlabs.com/puppet/augeasproviders_postgresql).
 
 ### pg_hba provider
 
@@ -212,4 +216,12 @@ In each form, `in <target>` is optional. You can also use a personalized namevar
 
 ## Issues
 
-Please file any issues or suggestions [on GitHub](https://github.com/hercules-team/augeasproviders_postgresql/issues).
+Please file any issues or suggestions [on GitHub](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/issues).
+
+## Transfer Notice
+
+This module was originally authored by [hercules-team](http://augeasproviders.com).
+The maintainer preferred that Vox Pupuli take ownership of the module for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here.
+
+Previously: https://github.com/hercules-team/augeasproviders_postgresql
