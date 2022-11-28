@@ -133,7 +133,7 @@ describe provider_class, :if => valid_lens? do
             'sameuser'   => :undef,
             'krb_realm'  => 'EXAMPLE.COM',
             'ldapsuffix' => ',ou=people,dc=example,dc=com',
-            },
+          },
           :target   => target,
           :provider => "augeas"
         ))
@@ -381,7 +381,7 @@ describe provider_class, :if => valid_lens? do
           :method   => "ident",
           :options  => {
             'sameuser' => :undef,
-            },
+          },
           :target   => target,
           :provider => "augeas"
         ))
@@ -495,7 +495,7 @@ describe provider_class, :if => valid_lens? do
           :options  => {
             'sameuser' => :undef,
             'map'      => 'omicron',
-            },
+          },
           :target   => target,
           :provider => "augeas"
         ))
@@ -512,7 +512,7 @@ describe provider_class, :if => valid_lens? do
           :method   => "ident",
           :options  => {
             'sameuser' => :undef,
-            },
+          },
           :target   => target,
           :provider => "augeas"
         ))
