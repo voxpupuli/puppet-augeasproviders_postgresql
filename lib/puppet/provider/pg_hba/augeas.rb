@@ -68,6 +68,31 @@ Puppet::Type.type(:pg_hba).provide(:augeas, :parent => Puppet::Type.type(:augeas
     end
   end
 
+  def self.instances
+    augopen do |aug|
+      resources = []
+      aug.match("$target/*[label()!='#comment']").each do |spath|
+        type = aug.get("#{spath}/type")
+        database = aug.get("#{spath}/control")
+        user = aug.get("#{spath}/user")
+        method = aug.get("#{spath}/method")
+        options = aug.match("#{spath}/options").map { |p| aug.get(p) }
+        entry = {:ensure   => :present,
+                 :type     => type,
+                 :database => database,
+                 :user     => user,
+                 :method   => method,
+                 :options  => options}
+        address = aug.match("#{spath}/address")
+        if address
+          entry[:address] = address
+        end
+    resources << new(entry)
+      end
+      resources
+    end
+  end
+
   define_aug_method!(:create) do |aug, resource|
     target_label = next_seq(aug.match('$target/*'))
     unless resource[:position].nil?
