@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v5.0.0](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/tree/v5.0.0) (2023-06-22)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/compare/v4.0.0...v5.0.0)
+
+**Breaking changes:**
+
+- Drop Puppet 6 support [\#18](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/pull/18) ([bastelfreak](https://github.com/bastelfreak))
+
+**Implemented enhancements:**
+
+- puppet/augeasproviders\_core: Allow 4.x [\#20](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/pull/20) ([bastelfreak](https://github.com/bastelfreak))
+- Add puppet 8 support [\#19](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/pull/19) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Fix broken Apache-2 license [\#15](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/pull/15) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [v4.0.0](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/tree/v4.0.0) (2022-11-28)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-augeasproviders_postgresql/compare/3.1.1...v4.0.0)
