@@ -142,6 +142,8 @@ Style/GuardClause:
 # SupportedShorthandSyntax: always, never, either, consistent
 Style/HashSyntax:
   EnforcedStyle: hash_rockets
+  Exclude:
+    - 'spec/spec_helper_acceptance.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
